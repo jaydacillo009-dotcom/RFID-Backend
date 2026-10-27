@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: rfid-api
+    runtime: docker
+    plan: 0.5c-512mb
+    healthCheckPath: /api/v1/health
+    envVars:
+      - key: SUPABASE_DB_URL
+        sync: false
+      - key: SUPABASE_URL
+        value: https://edelmgnzwcngnozaxrsx.supabase.co
+      - key: SUPABASE_PUBLISHABLE_KEY
+        sync: false
